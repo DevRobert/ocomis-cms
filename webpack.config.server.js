@@ -8,7 +8,7 @@ module.exports = {
         // poll for changes (hot module replacement)
         'webpack/hot/poll?1000',
         // entry point of server
-        './server/index'
+        './src/boot/server/index'
     ],
     resolve: {
         extensions: [

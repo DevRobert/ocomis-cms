@@ -8,9 +8,7 @@
         "sourceMap": true
     },
     "include": [
-        "./client/",
-        "./common/",
-        "./server/"
+        "./src/",
     ],
     "exclude": [
         "node_modules"
