@@ -32,7 +32,10 @@ module.exports = {
             {
                 test: /\.(t|j)sx?$/,
                 use: 'babel-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                include: [
+                    path.join(__dirname, 'src')
+                ]
             }
         ]
     },
