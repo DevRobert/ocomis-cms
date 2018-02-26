@@ -2,6 +2,7 @@ import * as express from 'express'
 import * as React from 'react'
 import { renderToString } from 'react-dom/server'
 import Router from '../../framework/Router'
+import buildRequest from '../../framework/request/ExpressRequestBuilder'
 
 const app = express()
 
@@ -13,7 +14,7 @@ app.get('/api', (request, response) => {
 
 app.get('*', (request, response) => {
     let router = new Router()
-    let application = router.getContent()
+    let application = router.getContent(buildRequest(request))
     let applicationHtml = renderToString(application)
 
     let html = `<!doctype html>

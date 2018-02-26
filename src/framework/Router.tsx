@@ -1,10 +1,17 @@
 import * as React from 'react'
+import { Request } from './request/index'
 
 export default class Router {
-    getContent(): React.ReactElement<any> {
+    getContent(request: any): React.ReactElement<any> {
         return (
             <div>
-                TODO: Implement Router!
+                <h1>Ocomis CMS</h1>
+                <p>
+                    TODO: Implement router!
+                </p>
+                <p>
+                    The request path is: <b>{request.path}</b>
+                </p>
             </div>
         )
     }
