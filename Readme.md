@@ -2,7 +2,10 @@
 
 ## Scripts
 
-### Start development server, including hot reloading
+### Start development server
+
 ```
-npm run start:server
+npm run start
 ```
+* includes hot reloading for server side
+* includes hot reloading for client side
