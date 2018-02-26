@@ -1,13 +1,13 @@
-import express from 'express'
-import React from 'react'
+import * as express from 'express'
+import * as React from 'react'
 import { renderToString } from 'react-dom/server'
-import App from '../common/App'
+import { App } from '../common/App'
 
 const app = express()
 
 app.get('/api', (request, response) => {
     response.send({
-        message: 'Hello from Node JS!'
+        message: 'Hello from Node JS/ Typescript!'
     })
 })
 

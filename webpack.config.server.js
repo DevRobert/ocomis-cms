@@ -10,6 +10,14 @@ module.exports = {
         // entry point of server
         './server/index'
     ],
+    resolve: {
+        extensions: [
+            ".ts",
+            ".tsx",
+            ".js",
+            ".jsx"
+        ] 
+    },
     watch: true,
     target: 'node',
     externals: [
@@ -22,7 +30,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(t|j)sx?$/,
                 use: 'babel-loader',
                 exclude: /node_modules/
             }

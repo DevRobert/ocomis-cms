@@ -9,11 +9,19 @@ module.exports = {
         'webpack/hot/only-dev-server',
         './client/index'
     ],
+    resolve: {
+        extensions: [
+            ".ts",
+            ".tsx",
+            ".js",
+            ".jsx"
+        ] 
+    },
     target: 'web',
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.(t|j)sx?$/,
                 use: 'babel-loader',
                 include: [
                     path.join(__dirname, 'client'),
